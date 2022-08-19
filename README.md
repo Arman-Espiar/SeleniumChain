@@ -1,6 +1,6 @@
 # SeleniumChains
 
-SeleniumChains is a library for fluent use and Avoiding repetitive tasks. This library has many helpful extension methods.
+SeleniumChains is a library for fluent use and Avoiding repetitive code. This library has many helpful extension methods.
 
 ## Usage
 
