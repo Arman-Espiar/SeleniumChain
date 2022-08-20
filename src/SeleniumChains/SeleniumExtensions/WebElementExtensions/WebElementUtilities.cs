@@ -5,11 +5,11 @@ public static class WebElementUtilities
 {
 
 	//Todo مطمعن نسیتم باید تست شود
-	public static IWebElement ClickOnElement(this IWebElement webElement)
+	public static IWebElement? ClickOnElement(this IWebElement? webElement)
 	{
 		if (webElement.IsElementDisplayedAndEnabled())
 		{
-			webElement.Click();
+			webElement?.Click();
 		}
 
 		return webElement;

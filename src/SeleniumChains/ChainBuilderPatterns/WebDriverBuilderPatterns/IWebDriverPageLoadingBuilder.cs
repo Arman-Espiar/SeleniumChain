@@ -5,30 +5,24 @@ namespace SeleniumChains.ChainBuilderPatterns.WebDriverBuilderPatterns;
 
 public interface IWebDriverPageLoadingBuilder 
 {
-    //IWebDriverPageLoadingBuilder WaitingForFullyLoadedInAllPages();
     IWebDriverPageLoadingBuilder WaitingForPageFullyLoadedByJavaScript(TimeSpan timeout);
     IWebDriverPageLoadingBuilder WaitingForPageLoad(TimeSpan timeout);
 }
 
-public class WebDriverPageLoadingBuilder : IWebDriverPageLoadingBuilder
+public class WebDriverPageLoadingBuilder :SeleniumChainBase, IWebDriverPageLoadingBuilder
 {
-    private readonly IWebDriver _driver;
+	
 
-    public WebDriverPageLoadingBuilder(IWebDriver driver)
+
+	public IWebDriverPageLoadingBuilder WaitingForPageFullyLoadedByJavaScript(TimeSpan timeout)
     {
-        _driver = driver;
-    }
-
-
-    public IWebDriverPageLoadingBuilder WaitingForPageFullyLoadedByJavaScript(TimeSpan timeout)
-    {
-        _driver.WaitingForPageFullyLoadedByJavaScript(timeout);
+        Driver?.WaitingForPageFullyLoadedByJavaScript(timeout);
         return this;
     }
 
     public IWebDriverPageLoadingBuilder WaitingForPageLoad(TimeSpan timeout)
     {
-        _driver.WaitingForPageLoad(timeout);
+        Driver?.WaitingForPageLoad(timeout);
         return this;
     }
 }

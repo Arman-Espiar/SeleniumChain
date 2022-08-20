@@ -18,9 +18,12 @@ public static class LoadingExtensions
 	/// <param name="webDriver"></param>
 	/// <param name="timeout"></param>
 	/// <returns></returns>
-	public static IWebDriver WaitingForEachPageToLoad(this IWebDriver webDriver, TimeSpan timeout)
+	public static IWebDriver? WaitingForEachPageToLoad(this IWebDriver? webDriver, TimeSpan timeout)
 	{
-		webDriver.Manage().Timeouts().ImplicitWait = timeout;
+		if (webDriver != null)
+		{
+			webDriver.Manage().Timeouts().ImplicitWait = timeout;
+		}
 		return webDriver;
 	}
 	/// <summary>
@@ -30,30 +33,37 @@ public static class LoadingExtensions
 	/// <param name="timeout"></param>
 	/// <see cref="https://www.selenium.dev/documentation/webdriver/capabilities/shared/"/>
 	/// <returns></returns>
-	public static IWebDriver WaitingForPageFullyLoadedByJavaScript(this IWebDriver webDriver, TimeSpan timeout)
+	public static IWebDriver? WaitingForPageFullyLoadedByJavaScript(this IWebDriver? webDriver, TimeSpan timeout)
 	{
 		new WebDriverWait(webDriver, timeout).Until(
 			d => ((IJavaScriptExecutor)d).ExecuteScript("return document.readyState").Equals("complete"));
 		return webDriver;
 	}
-	public static IWebDriver WaitingForPageLoad(this IWebDriver webDriver, TimeSpan timeout)
+	public static IWebDriver? WaitingForPageLoad(this IWebDriver? webDriver, TimeSpan timeout)
 	{
-		webDriver.Manage().Timeouts().PageLoad = timeout;
+		if (webDriver != null)
+		{
+			webDriver.Manage().Timeouts().PageLoad = timeout;
+		}
 		return webDriver;
 	}
-	public static IWebDriver AsynchronousJavaScriptLoad(this IWebDriver webDriver, TimeSpan timeout)
+	public static IWebDriver? AsynchronousJavaScriptLoad(this IWebDriver? webDriver, TimeSpan timeout)
 	{
-		webDriver.Manage().Timeouts().AsynchronousJavaScript = timeout;
+		if (webDriver != null)
+		{
+			webDriver.Manage().Timeouts().AsynchronousJavaScript = timeout;
+		}
+		return webDriver;
+
+	}
+	public static IWebDriver? JavaScriptLoad(this IWebDriver? webDriver, string script)
+	{
+		webDriver?.ExecuteJavaScript(script);
 		return webDriver;
 	}
-	public static IWebDriver JavaScriptLoad(this IWebDriver webDriver, string script)
+	public static IWebDriver? JavaScriptLoad(this IWebDriver? webDriver, string script, params object[] args)
 	{
-		webDriver.ExecuteJavaScript(script);
-		return webDriver;
-	}
-	public static IWebDriver JavaScriptLoad(this IWebDriver webDriver, string script, params object[] args)
-	{
-		webDriver.ExecuteJavaScript(script, args);
+		webDriver?.ExecuteJavaScript(script, args);
 		return webDriver;
 	}
 }

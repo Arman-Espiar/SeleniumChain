@@ -9,23 +9,18 @@ public interface IPageNavigationBuilder
 
 }
 
-public class PageNavigationBuilder : IPageNavigationBuilder
+public class PageNavigationBuilder :SeleniumChainBase, IPageNavigationBuilder
 {
-	private readonly IWebDriver _driver;
-
-	public PageNavigationBuilder(IWebDriver driver)
-	{
-		_driver = driver;
-	}
+	
 	public IPageNavigationBuilder ScrollDown()
 	{
-		_driver?.FindElementIfExistsByTagName("html")?.SendKeys(Keys.End);
+		Driver?.FindElementIfExistsByTagName("html")?.ScrollDownElement();
 		return this;
 	}
 
 	public IPageNavigationBuilder ScrollUp()
 	{
-		_driver?.FindElementIfExistsByTagName("body")?.ScrollUpElement();
+		Driver?.FindElementIfExistsByTagName("body")?.ScrollUpElement();
 		return this;
 	}
 	

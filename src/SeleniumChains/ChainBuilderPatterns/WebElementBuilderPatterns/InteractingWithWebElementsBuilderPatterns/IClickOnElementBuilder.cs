@@ -14,52 +14,47 @@ public interface IClickOnElementBuilder
 	IClickOnElementBuilder ClickOnElementByXPath(string xPath);
 }
 
-public class ClickOnElementBuilder : IClickOnElementBuilder
+public class ClickOnElementBuilder :SeleniumChainBase, IClickOnElementBuilder
 {
-	private  readonly IWebDriver _driver;
 
-	public ClickOnElementBuilder(IWebDriver driver)
-	{
-		_driver = driver;
-	}
 	public IClickOnElementBuilder ClickOnElementById(string id)
 	{
-		_driver.FindElementIfExistsById(id)?.ClickOnElement();
+		Driver?.FindElementIfExistsById(id)?.ClickOnElement();
 		return this;
 	}
 	public IClickOnElementBuilder ClickOnElementByTagName(string tagName)
 	{
-		_driver.FindElementIfExistsByTagName(tagName)?.ClickOnElement();
+		Driver?.FindElementIfExistsByTagName(tagName)?.ClickOnElement();
 		return this;
 	}
 	public IClickOnElementBuilder ClickOnElementByClassName(string className)
 	{
-		_driver.FindElementIfExistsByClassName(className)?.ClickOnElement();
+		Driver?.FindElementIfExistsByClassName(className)?.ClickOnElement();
 		return this;
 	}
 	public IClickOnElementBuilder ClickOnElementByCssSelector(string cssSelector)
 	{
-		_driver.FindElementIfExistsByCssSelector(cssSelector)?.ClickOnElement();
+		Driver?.FindElementIfExistsByCssSelector(cssSelector)?.ClickOnElement();
 		return this;
 	}
 	public IClickOnElementBuilder ClickOnElementByLinkText(string linkText)
 	{
-		_driver.FindElementIfExistsByLinkText(linkText)?.ClickOnElement();
+		Driver?.FindElementIfExistsByLinkText(linkText)?.ClickOnElement();
 		return this;
 	}
 	public IClickOnElementBuilder ClickOnElementByName(string name)
 	{
-		_driver.FindElementIfExistsByName(name)?.ClickOnElement();
+		Driver?.FindElementIfExistsByName(name)?.ClickOnElement();
 		return this;
 	}
 	public IClickOnElementBuilder ClickOnElementByPartialLinkText(string partialLinkText)
 	{
-		_driver.FindElementIfExistsByPartialLinkText(partialLinkText)?.ClickOnElement();
+		Driver?.FindElementIfExistsByPartialLinkText(partialLinkText)?.ClickOnElement();
 		return this;
 	}
 	public IClickOnElementBuilder ClickOnElementByXPath(string xPath)
 	{
-		_driver.FindElementIfExistsByXPath(xPath)?.ClickOnElement();
+		Driver?.FindElementIfExistsByXPath(xPath)?.ClickOnElement();
 		return this;
 	}
 

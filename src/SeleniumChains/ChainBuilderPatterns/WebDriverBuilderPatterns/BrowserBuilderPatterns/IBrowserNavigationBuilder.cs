@@ -13,43 +13,37 @@ public interface IBrowserNavigationBuilder
 
 }
 
-public class BrowserNavigationBuilder : IBrowserNavigationBuilder
+public class BrowserNavigationBuilder :SeleniumChainBase, IBrowserNavigationBuilder
 {
-	private readonly IWebDriver _driver;
-
-	public BrowserNavigationBuilder(IWebDriver driver)
-	{
-		_driver = driver;
-	}
-
+	
 
 	public IBrowserNavigationBuilder Goto(string url)
 	{
-		_driver.GotoUrl(url);
+		Driver?.GotoUrl(url);
 		return this;
 	}
 
 	public IBrowserNavigationBuilder Goto(Uri url)
 	{
-		_driver.GotoUrl(url);
+		Driver?.GotoUrl(url);
 		return this;
 	}
 
 	public IBrowserNavigationBuilder RefreshUrl()
 	{
-		_driver.RefreshUrl();
+		Driver?.RefreshUrl();
 		return this;
 	}
 
 	public IBrowserNavigationBuilder BrowserHistoryForward()
 	{
-		_driver.BrowserHistoryForward();
+		Driver?.BrowserHistoryForward();
 		return this;
 	}
 
 	public IBrowserNavigationBuilder BrowserHistoryBackward()
 	{
-		_driver.BrowserHistoryBackward();
+		Driver?.BrowserHistoryBackward();
 		return this;
 	}
 

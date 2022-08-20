@@ -3,14 +3,14 @@
 namespace SeleniumChains.SeleniumExtensions.WebDriverExtensions;
 public static class UrlNavigationExtensions
 {
-	public static IWebDriver GotoUrl(this IWebDriver webDriver, string url)
+	public static IWebDriver? GotoUrl(this IWebDriver? webDriver, string url)
 	{
-		webDriver.Navigate().GoToUrl(url);
+		webDriver?.Navigate().GoToUrl(url);
 		return webDriver;
 	}
-	public static IWebDriver GotoUrl(this IWebDriver webDriver, Uri url)
+	public static IWebDriver? GotoUrl(this IWebDriver? webDriver, Uri url)
 	{
-		webDriver.Navigate().GoToUrl(url);
+		webDriver?.Navigate().GoToUrl(url);
 		return webDriver;
 	}
 	
@@ -19,9 +19,9 @@ public static class UrlNavigationExtensions
 	/// </summary>
 	/// <param name="webDriver"></param>
 	/// <returns></returns>
-	public static IWebDriver RefreshUrl(this IWebDriver webDriver)
+	public static IWebDriver? RefreshUrl(this IWebDriver? webDriver)
 	{
-		webDriver.Navigate().Refresh();
+		webDriver?.Navigate().Refresh();
 		return webDriver;
 	}
 	/// <summary>
@@ -29,9 +29,9 @@ public static class UrlNavigationExtensions
 	/// </summary>
 	/// <param name="webDriver"></param>
 	/// <returns></returns>
-	public static IWebDriver BrowserHistoryForward(this IWebDriver webDriver)
+	public static IWebDriver? BrowserHistoryForward(this IWebDriver? webDriver)
 	{
-		webDriver.Navigate().Forward();
+		webDriver?.Navigate().Forward();
 		return webDriver;
 	}
 	/// <summary>
@@ -39,9 +39,9 @@ public static class UrlNavigationExtensions
 	/// </summary>
 	/// <param name="webDriver"></param>
 	/// <returns></returns>
-	public static IWebDriver BrowserHistoryBackward(this IWebDriver webDriver)
+	public static IWebDriver? BrowserHistoryBackward(this IWebDriver? webDriver)
 	{
-		webDriver.Navigate().Back();
+		webDriver?.Navigate().Back();
 		return webDriver;
 	}
 

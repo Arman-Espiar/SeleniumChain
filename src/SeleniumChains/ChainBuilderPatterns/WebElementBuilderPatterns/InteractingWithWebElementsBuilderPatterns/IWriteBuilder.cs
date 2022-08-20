@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+
 using SeleniumChains.SeleniumExtensions.WebElementExtensions;
 
 namespace SeleniumChains.ChainBuilderPatterns.WebElementBuilderPatterns.InteractingWithWebElementsBuilderPatterns;
@@ -15,21 +16,17 @@ public interface IWriteBuilder
 
 }
 
-public class WriteBuilder : IWriteBuilder
+public class WriteBuilder : SeleniumChainBase, IWriteBuilder
 {
-	private readonly IWebDriver _driver;
+
 
 	private IWebElement? Element { get; set; }
-	public WriteBuilder(IWebDriver driver)
-	{
-		_driver = driver;
-	}
 
 	public IWriteBuilder WriteInElementById(string id, string text)
 	{
-		Element ??= _driver.FindElementIfExistsById(id);
+		Element ??= Driver?.FindElementIfExistsById(id);
 
-		_driver.FindElementIfExistsById(id)?.WriteInElement(text);
+		Driver?.FindElementIfExistsById(id)?.WriteInElement(text);
 		return this;
 	}
 	public IWriteBuilder WriteInElementById(string text)
@@ -41,9 +38,9 @@ public class WriteBuilder : IWriteBuilder
 
 	public IWriteBuilder WriteAppendInElementById(string id, string text)
 	{
-		Element ??= _driver.FindElementIfExistsById(id);
+		Element ??= Driver?.FindElementIfExistsById(id);
 
-		_driver.FindElementIfExistsById(id)?.WriteAppendInElement(text);
+		Driver?.FindElementIfExistsById(id)?.WriteAppendInElement(text);
 		return this;
 	}
 	public IWriteBuilder WriteAppendInElementById(string text)
@@ -54,8 +51,8 @@ public class WriteBuilder : IWriteBuilder
 
 	public IWriteBuilder WritePrependInElementById(string id, string text)
 	{
-		Element??= _driver.FindElementIfExistsById(id);
-		_driver.FindElementIfExistsById(id)?.WritePrependInElement(text);
+		Element ??= Driver?.FindElementIfExistsById(id);
+		Driver?.FindElementIfExistsById(id)?.WritePrependInElement(text);
 		return this;
 	}
 
@@ -67,8 +64,8 @@ public class WriteBuilder : IWriteBuilder
 
 	public IWriteBuilder ClearTextInputElementById(string id)
 	{
-		Element ??= _driver.FindElementIfExistsById(id);
-		_driver.FindElementIfExistsById(id)?.ClearTextInputElement();
+		Element ??= Driver?.FindElementIfExistsById(id);
+		Driver?.FindElementIfExistsById(id)?.ClearTextInputElement();
 		return this;
 	}
 	public IWriteBuilder ClearTextInputElementById()

@@ -9,29 +9,24 @@ public interface IWebDriverBuilder
     IWebDriverBuilder JavaScriptLoad(string script, params object[] args);
 }
 
-public class WebDriverBuilder : IWebDriverBuilder
+public class WebDriverBuilder : SeleniumChainBase, IWebDriverBuilder
 {
-    private readonly IWebDriver _driver;
-    public WebDriverBuilder(IWebDriver driver)
+	
+	public IWebDriverBuilder AsynchronousJavaScriptLoad(TimeSpan timeout)
     {
-        _driver = driver;
-    }
-
-    public IWebDriverBuilder AsynchronousJavaScriptLoad(TimeSpan timeout)
-    {
-        _driver.AsynchronousJavaScriptLoad(timeout);
+        Driver?.AsynchronousJavaScriptLoad(timeout);
         return this;
     }
 
     public IWebDriverBuilder JavaScriptLoad(string script)
     {
-        _driver.JavaScriptLoad(script);
+        Driver?.JavaScriptLoad(script);
         return this;
     }
 
     public IWebDriverBuilder JavaScriptLoad(string script, params object[] args)
     {
-        _driver.JavaScriptLoad(script, args);
+        Driver?.JavaScriptLoad(script, args);
         return this;
     }
 }
