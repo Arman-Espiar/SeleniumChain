@@ -44,5 +44,5 @@ new SeleniumChain(driver)
 	;
 ```
 
-## Please watch wiki
+## wiki
 [wiki](https://github.com/Arman-Espiar/SeleniumChains/wiki)
