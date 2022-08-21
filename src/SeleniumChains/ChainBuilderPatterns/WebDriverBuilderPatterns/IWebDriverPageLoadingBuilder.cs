@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using SeleniumChains.SeleniumChainClasses.Base;
 using SeleniumChains.SeleniumExtensions.WebDriverExtensions;
 
 namespace SeleniumChains.ChainBuilderPatterns.WebDriverBuilderPatterns;

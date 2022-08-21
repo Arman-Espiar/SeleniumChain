@@ -1,39 +1,55 @@
 ﻿using SeleniumChains.ChainBuilderPatterns.WebElementBuilderPatterns.FindingWebElementsBuilderPatterns;
 using SeleniumChains.ChainBuilderPatterns.WebElementBuilderPatterns.InteractingWithWebElementsBuilderPatterns;
+using SeleniumChains.SeleniumChainClasses.Base;
 
 namespace SeleniumChains.SeleniumChainClasses;
-public class FindElementsBy:SeleniumChainBase
+public class FindElementsBy:SeleniumChainBase, IFindElementsBy
 {
-	public void Id(string id)
+	private readonly SeleniumChain _seleniumChain;
+
+	public FindElementsBy(SeleniumChain seleniumChain)
+	{
+		_seleniumChain = seleniumChain;
+	}
+
+	public SeleniumChain Id(string id)
 	{
 		new ElementsFindersBuilder().FindElementsIfExistsById(id);
+		return _seleniumChain;
 	}
-	public void ClassName(string className)
+	public SeleniumChain ClassName(string className)
 	{
 		new ElementsFindersBuilder().FindElementsIfExistsByClassName(className);
+		return _seleniumChain;
 	}
-	public void CssSelector(string cssSelector)
+	public SeleniumChain CssSelector(string cssSelector)
 	{
 		new ElementsFindersBuilder().FindElementsIfExistsByCssSelector(cssSelector);
+		return _seleniumChain;
 	}
-	public void LinkText(string linkText)
+	public SeleniumChain LinkText(string linkText)
 	{
 		new ElementsFindersBuilder().FindElementsIfExistsByLinkText(linkText);
+		return _seleniumChain;
 	}
-	public void Name(string name)
+	public SeleniumChain Name(string name)
 	{
 		new ElementsFindersBuilder().FindElementsIfExistsByName(name);
+		return _seleniumChain;
 	}
-	public void PartialLinkText(string partialLinkText)
+	public SeleniumChain PartialLinkText(string partialLinkText)
 	{
 		new ElementsFindersBuilder().FindElementsIfExistsByPartialLinkText(partialLinkText);
+		return _seleniumChain;
 	}
-	public void TagName(string tagName)
+	public SeleniumChain TagName(string tagName)
 	{
 		new ElementsFindersBuilder().FindElementsIfExistsByTagName(tagName);
+		return _seleniumChain;
 	}
-	public void XPath(string xPath)
+	public SeleniumChain XPath(string xPath)
 	{
 		new ElementsFindersBuilder().FindElementsIfExistsByXPath(xPath);
+		return _seleniumChain;
 	}
 }

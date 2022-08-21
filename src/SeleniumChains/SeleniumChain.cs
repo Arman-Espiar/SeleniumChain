@@ -1,15 +1,20 @@
 ﻿using OpenQA.Selenium;
+
 using SeleniumChains.ChainBuilderPatterns.WebDriverBuilderPatterns.BrowserBuilderPatterns;
 using SeleniumChains.ChainBuilderPatterns.WebElementBuilderPatterns;
 using SeleniumChains.ChainBuilderPatterns.WebElementBuilderPatterns.FindingWebElementsBuilderPatterns;
 using SeleniumChains.ChainBuilderPatterns.WebElementBuilderPatterns.InteractingWithWebElementsBuilderPatterns;
-using SeleniumChains.SeleniumChainClasses;
+using SeleniumChains.SeleniumChainClasses.Base;
 using SeleniumChains.SeleniumExtensions.WebDriverExtensions;
 using SeleniumChains.SeleniumExtensions.WebElementExtensions;
 
 namespace SeleniumChains;
-public class SeleniumChain:SeleniumChainBase
+public class SeleniumChain : SeleniumChainBase
 {
+	public SeleniumChain()
+	{
+		ChainBase.SetSeleniumChain(this);
+	}
 	public SeleniumChain SetDriver(IWebDriver? driver)
 	{
 		Driver = driver;
@@ -55,7 +60,7 @@ public class SeleniumChain:SeleniumChainBase
 
 	public SeleniumChain PageNavigation(Action<IPageNavigationBuilder> configure)
 	{
-		var pageNavigationBuilder = new PageNavigationBuilder();	
+		var pageNavigationBuilder = new PageNavigationBuilder();
 		configure(pageNavigationBuilder);
 		return this;
 	}
@@ -73,50 +78,6 @@ public class SeleniumChain:SeleniumChainBase
 		configure(webElementBuilder);
 		return this;
 	}
-	#region ClickOneElementBy
-
-	public SeleniumChain ClickOnElementById(string id)
-	{
-		new ClickOnBy().Id(id);
-		return this;
-	}
-	public SeleniumChain ClickOnElementByClassName(string className)
-	{
-		new ClickOnBy().ClassName(className);
-		return this;
-	}
-	public SeleniumChain ClickOnElementByCssSelector(string cssSelector)
-	{
-		new ClickOnBy().CssSelector(cssSelector);
-		return this;
-	}
-	public SeleniumChain ClickOnElementByLinkText(string linkText)
-	{
-		new ClickOnBy().LinkText(linkText);
-		return this;
-	}
-	public SeleniumChain ClickOnElementByName(string name)
-	{
-		new ClickOnBy().Name(name);
-		return this;
-	}
-	public SeleniumChain ClickOnElementByPartialLinkText(string partialLinkText)
-	{
-		new ClickOnBy().PartialLinkText(partialLinkText);
-		return this;
-	}
-	public SeleniumChain ClickOnElementByTagName(string tagName)
-	{
-		new ClickOnBy().TagName(tagName);
-		return this;
-	}
-	public SeleniumChain ClickOnElementByXPath(string xPath)
-	{
-		new ClickOnBy().XPath(xPath);
-		return this;
-	}
-	#endregion End ClickOneElementBy
-
 
 	public SeleniumChain WriteInElement(Action<IWriteBuilder> configure)
 	{
@@ -140,88 +101,107 @@ public class SeleniumChain:SeleniumChainBase
 	#region FindElementsBy
 	public SeleniumChain FindElementsIfExistsById(string id)
 	{
-		new FindElementsBy().Id(id);
-		return this;
+		return ChainBase.FindElementsBy.Id(id);
 	}
 	public SeleniumChain FindElementsIfExistsByClassName(string className)
 	{
-		new FindElementsBy().ClassName(className);
-		return this;
+		return ChainBase.FindElementsBy.ClassName(className);
 	}
 	public SeleniumChain FindElementsIfExistsByCssSelector(string cssSelector)
 	{
-		new FindElementsBy().CssSelector(cssSelector);
-		return this;
+		return ChainBase.FindElementsBy.CssSelector(cssSelector);
 	}
 	public SeleniumChain FindElementsIfExistsByLinkText(string linkText)
 	{
-		new FindElementsBy().LinkText(linkText);
-		return this;
+		return ChainBase.FindElementsBy.LinkText(linkText);
 	}
 	public SeleniumChain FindElementsIfExistsByName(string name)
 	{
-		new FindElementsBy().Name(name);
-		return this;
+		return ChainBase.FindElementsBy.Name(name);
 	}
 	public SeleniumChain FindElementsIfExistsByPartialLinkText(string partialLinkText)
 	{
-		new FindElementsBy().PartialLinkText(partialLinkText);
-		return this;
+		return ChainBase.FindElementsBy.PartialLinkText(partialLinkText);
 	}
 	public SeleniumChain FindElementsIfExistsByTagName(string tagName)
 	{
-		new FindElementsBy().TagName(tagName);
-		return this;
+		return ChainBase.FindElementsBy.TagName(tagName);
 	}
 	public SeleniumChain FindElementsIfExistsByXPath(string xPath)
 	{
-		new FindElementsBy().XPath(xPath);
-		return this;
+		return ChainBase.FindElementsBy.XPath(xPath);
 	}
 	#endregion End FindElementsBy
 
 	#region FindElementBy
 	public SeleniumChain FindElementIfExistsById(string id)
 	{
-		new FindElementBy().Id(id);
-		return this;
+		return ChainBase.FindElementBy.Id(id);
 	}
 	public SeleniumChain FindElementIfExistsByClassName(string className)
 	{
-		new FindElementBy().ClassName(className);
-		return this;
+		return ChainBase.FindElementBy.ClassName(className);
 	}
 	public SeleniumChain FindElementIfExistsByCssSelector(string cssSelector)
 	{
-		new FindElementBy().CssSelector(cssSelector);
-		return this;
+		return ChainBase.FindElementBy.CssSelector(cssSelector);
 	}
 	public SeleniumChain FindElementIfExistsByLinkText(string linkText)
 	{
-		new FindElementBy().LinkText(linkText);
-		return this;
+		return ChainBase.FindElementBy.LinkText(linkText);
 	}
 	public SeleniumChain FindElementIfExistsByName(string name)
 	{
-		new FindElementBy().Name(name);
-		return this;
+		return ChainBase.FindElementBy.Name(name);
 	}
 	public SeleniumChain FindElementIfExistsByPartialLinkText(string partialLinkText)
 	{
-		new FindElementBy().PartialLinkText(partialLinkText);
-		return this;
+		return ChainBase.FindElementBy.PartialLinkText(partialLinkText);
 	}
 	public SeleniumChain FindElementIfExistsByTagName(string tagName)
 	{
-		new FindElementBy().TagName(tagName);
-		return this;
+		return ChainBase.FindElementBy.TagName(tagName);
 	}
 	public SeleniumChain FindElementIfExistsByXPath(string xPath)
 	{
-		new FindElementBy().XPath(xPath);
-		return this;
+		return ChainBase.FindElementBy.XPath(xPath);
 	}
 	#endregion End FindElementBy
 
+	#region ClickOnElementBy
+	public SeleniumChain ClickOnElementById(string id)
+	{
+		return ChainBase.ClickOnElementBy.Id(id);
+	}
+	public SeleniumChain ClickOnElementByClassName(string className)
+	{
+		return ChainBase.ClickOnElementBy.ClassName(className);
+	}
+	public SeleniumChain ClickOnElementByCssSelector(string cssSelector)
+	{
+		return ChainBase.ClickOnElementBy.CssSelector(cssSelector);
+	}
+	public SeleniumChain ClickOnElementByLinkText(string linkText)
+	{
+		return ChainBase.ClickOnElementBy.LinkText(linkText);
+	}
+	public SeleniumChain ClickOnElementByName(string name)
+	{
+		return ChainBase.ClickOnElementBy.Name(name);
+
+	}
+	public SeleniumChain ClickOnElementByPartialLinkText(string partialLinkText)
+	{
+		return ChainBase.ClickOnElementBy.PartialLinkText(partialLinkText);
+	}
+	public SeleniumChain ClickOnElementByTagName(string tagName)
+	{
+		return ChainBase.ClickOnElementBy.TagName(tagName);
+	}
+	public SeleniumChain ClickOnElementByXPath(string xPath)
+	{
+		return ChainBase.ClickOnElementBy.XPath(xPath);
+	}
+	#endregion End ClickOnElementBy
 	public void CloseBrowser() => Driver?.Close();
 }
