@@ -1,13 +1,13 @@
-# SeleniumChains
+# SeleniumChain
 
-SeleniumChains is a library for fluent use and Avoiding repetitive code. This library has many helpful extension methods.
+SeleniumChain is a library for fluent use and Avoiding repetitive code. This library has many helpful extension methods.
 
 ## Usage
 
 ```csharp
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
-using SeleniumChains;
+using SeleniumChain;
 
 IWebDriver driver = new FirefoxDriver();
 
@@ -45,4 +45,4 @@ new SeleniumChain(driver)
 ```
 
 ## wiki
-[wiki](https://github.com/Arman-Espiar/SeleniumChains/wiki)
+[wiki](https://github.com/Arman-Espiar/SeleniumChain/wiki)
