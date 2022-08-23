@@ -1,5 +1,5 @@
 ﻿using SeleniumChain.SeleniumChainClasses.Base;
-using SeleniumChain.SeleniumExtensions.WebDriverExtensions;
+using SeleniumExtensionMethods.SeleniumExtensions.WebDriverExtensions;
 
 namespace SeleniumChain.ChainBuilderPatterns.WebDriverBuilderPatterns.BrowserBuilderPatterns;
 public interface IBrowserNavigationBuilder

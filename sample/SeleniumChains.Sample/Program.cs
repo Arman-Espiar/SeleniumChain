@@ -1,5 +1,4 @@
-﻿using System.Runtime.CompilerServices;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
 
 IWebDriver driver = new FirefoxDriver();
@@ -34,7 +33,8 @@ new SeleniumChain.ChainSelenium().SetDriver(driver)
 		.ClearTextInputElementById()
 		.WriteInElementById("Order of Assassins" + Keys.Enter)
 	)
-	.ClickOnElement(config => config.ClickOnElementByXPath("/html/body/div[3]/div[3]/div[5]/div[1]/div[4]/ul/li[5]/a"))
+	.ClickOnElement(config => config
+		.ClickOnElementByXPath("/html/body/div[3]/div[3]/div[5]/div[1]/div[4]/ul/li[5]/a"))
 	.ClickOnElementById("p-logo")
 	.ClickOnElementById("ca-viewsource")
 	.ScrollDownElementIfExistsById("wpTextbox1")

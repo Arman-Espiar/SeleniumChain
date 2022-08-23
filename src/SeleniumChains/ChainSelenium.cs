@@ -4,8 +4,8 @@ using SeleniumChain.ChainBuilderPatterns.WebElementBuilderPatterns;
 using SeleniumChain.ChainBuilderPatterns.WebElementBuilderPatterns.FindingWebElementsBuilderPatterns;
 using SeleniumChain.ChainBuilderPatterns.WebElementBuilderPatterns.InteractingWithWebElementsBuilderPatterns;
 using SeleniumChain.SeleniumChainClasses.Base;
-using SeleniumChain.SeleniumExtensions.WebDriverExtensions;
-using SeleniumChain.SeleniumExtensions.WebElementExtensions;
+using SeleniumExtensionMethods.SeleniumExtensions.WebDriverExtensions;
+using SeleniumExtensionMethods.SeleniumExtensions.WebElementExtensions;
 
 namespace SeleniumChain;
 public class ChainSelenium : SeleniumChainBase

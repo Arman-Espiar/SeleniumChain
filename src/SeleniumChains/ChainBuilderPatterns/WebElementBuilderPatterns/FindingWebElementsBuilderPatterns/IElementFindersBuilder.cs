@@ -1,5 +1,5 @@
 ﻿using SeleniumChain.SeleniumChainClasses.Base;
-using SeleniumChain.SeleniumExtensions.WebElementExtensions;
+using SeleniumExtensionMethods.SeleniumExtensions.WebElementExtensions;
 
 namespace SeleniumChain.ChainBuilderPatterns.WebElementBuilderPatterns.FindingWebElementsBuilderPatterns;
 public interface IElementFindersBuilder
