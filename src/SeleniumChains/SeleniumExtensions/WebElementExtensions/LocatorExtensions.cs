@@ -1,7 +1,7 @@
 ﻿using OpenQA.Selenium;
-using SeleniumChains.SeleniumExtensions.WebDriverExtensions;
+using SeleniumChain.SeleniumExtensions.WebDriverExtensions;
 
-namespace SeleniumChains.SeleniumExtensions.WebElementExtensions;
+namespace SeleniumChain.SeleniumExtensions.WebElementExtensions;
 public static class LocatorExtensions
 {
     public static IWebElement? FindElementIfExistsById(this IWebDriver driver, string id)

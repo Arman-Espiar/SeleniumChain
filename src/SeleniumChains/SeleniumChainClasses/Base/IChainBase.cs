@@ -1,9 +1,9 @@
-﻿using SeleniumChains.CustomExceptions;
+﻿using SeleniumChain.CustomExceptions;
 
-namespace SeleniumChains.SeleniumChainClasses.Base;
+namespace SeleniumChain.SeleniumChainClasses.Base;
 public interface IChainBase
 {
-	void SetSeleniumChain(SeleniumChain seleniumChain);
+	void SetSeleniumChain(ChainSelenium chainSelenium);
 	IClickOnElementBy ClickOnElementBy { get; }
 	IFindElementsBy FindElementsBy { get; }
 	IFindElementBy FindElementBy { get; }
@@ -11,11 +11,11 @@ public interface IChainBase
 
 public class ChainBase : IChainBase
 {
-	private  SeleniumChain? _seleniumChain;
+	private  ChainSelenium? _seleniumChain;
 
-	public void SetSeleniumChain(SeleniumChain seleniumChain)
+	public void SetSeleniumChain(ChainSelenium chainSelenium)
 	{
-		_seleniumChain = seleniumChain;
+		_seleniumChain = chainSelenium;
 	}
 
 	private IClickOnElementBy? _clickOnElementBy;

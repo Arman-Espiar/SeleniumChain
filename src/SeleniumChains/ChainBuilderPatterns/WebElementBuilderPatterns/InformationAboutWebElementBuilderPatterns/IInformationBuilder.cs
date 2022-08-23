@@ -1,4 +1,4 @@
-﻿namespace SeleniumChains.ChainBuilderPatterns.WebElementBuilderPatterns.InformationAboutWebElementBuilderPatterns;
+﻿namespace SeleniumChain.ChainBuilderPatterns.WebElementBuilderPatterns.InformationAboutWebElementBuilderPatterns;
 public interface IInformationBuilder
 {
 	//todo kamel shavad

@@ -1,4 +1,4 @@
-﻿namespace SeleniumChains.ChainBuilderPatterns.WebDriverBuilderPatterns.JavaScriptAlertBuilderPatterns;
+﻿namespace SeleniumChain.ChainBuilderPatterns.WebDriverBuilderPatterns.JavaScriptAlertBuilderPatterns;
 public interface IJavaScriptAlertBuilder
 {
 	//Todo kamel shavad. 

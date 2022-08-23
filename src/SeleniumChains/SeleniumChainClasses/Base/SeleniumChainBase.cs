@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics.SymbolStore;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using OpenQA.Selenium;
 
-using OpenQA.Selenium;
-
-namespace SeleniumChains.SeleniumChainClasses.Base;
+namespace SeleniumChain.SeleniumChainClasses.Base;
 public abstract class SeleniumChainBase
 {
     protected SeleniumChainBase()

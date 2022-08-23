@@ -2,7 +2,7 @@
 using OpenQA.Selenium.Support.Extensions;
 using OpenQA.Selenium.Support.UI;
 
-namespace SeleniumChains.SeleniumExtensions.WebDriverExtensions;
+namespace SeleniumChain.SeleniumExtensions.WebDriverExtensions;
 
 /// <summary>
 /// Warning: Do not mix implicit and explicit waits. Doing so can cause unpredictable wait times.

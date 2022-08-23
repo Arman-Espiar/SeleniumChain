@@ -1,4 +1,4 @@
-﻿namespace SeleniumChains.ChainBuilderPatterns.WebDriverBuilderPatterns.IframeBuilderPatterns;
+﻿namespace SeleniumChain.ChainBuilderPatterns.WebDriverBuilderPatterns.IframeBuilderPatterns;
 public interface IIframeBuilder
 {
 	//todo kamel shavad

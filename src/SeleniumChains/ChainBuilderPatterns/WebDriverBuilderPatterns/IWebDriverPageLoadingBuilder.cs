@@ -1,8 +1,7 @@
-﻿using OpenQA.Selenium;
-using SeleniumChains.SeleniumChainClasses.Base;
-using SeleniumChains.SeleniumExtensions.WebDriverExtensions;
+﻿using SeleniumChain.SeleniumChainClasses.Base;
+using SeleniumChain.SeleniumExtensions.WebDriverExtensions;
 
-namespace SeleniumChains.ChainBuilderPatterns.WebDriverBuilderPatterns;
+namespace SeleniumChain.ChainBuilderPatterns.WebDriverBuilderPatterns;
 
 public interface IWebDriverPageLoadingBuilder 
 {

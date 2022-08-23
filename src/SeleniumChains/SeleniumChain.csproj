@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PackageProjectUrl>https://github.com/Arman-Espiar/SeleniumChains</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Arman-Espiar/SeleniumChains</RepositoryUrl>
+    <PackageTags>Selenium,Extension,Fluent</PackageTags>
+    <Authors>Arman Espiar</Authors>
+    <Description>SeleniumChain Library Has many extension methods for selenium and has fluent commands.</Description>
+    <Title>Selenium Chains</Title>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Selenium.Support" Version="4.4.0" />
+    <PackageReference Include="Selenium.WebDriver" Version="4.4.0" />
+  </ItemGroup>
+
+</Project>

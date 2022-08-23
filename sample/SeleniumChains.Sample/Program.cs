@@ -1,14 +1,13 @@
 ﻿using System.Runtime.CompilerServices;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
-using SeleniumChains;
 
 IWebDriver driver = new FirefoxDriver();
 
 string webUrl = "https://www.wikipedia.org/";
 
 
-new SeleniumChain().SetDriver(driver)
+new SeleniumChain.ChainSelenium().SetDriver(driver)
 	.ImplicitWaitingForEachPageToLoad(TimeSpan.FromSeconds(3))
 	.Goto(webUrl)
 	.PageNavigation(config => config.ScrollDown())

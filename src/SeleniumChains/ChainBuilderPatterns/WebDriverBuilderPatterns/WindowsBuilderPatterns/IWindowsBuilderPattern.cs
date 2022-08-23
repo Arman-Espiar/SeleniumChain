@@ -1,4 +1,4 @@
-﻿namespace SeleniumChains.ChainBuilderPatterns.WebDriverBuilderPatterns.WindowsBuilderPatterns;
+﻿namespace SeleniumChain.ChainBuilderPatterns.WebDriverBuilderPatterns.WindowsBuilderPatterns;
 public interface IWindowsBuilderPattern
 {
 	//Todo kamel shavad.

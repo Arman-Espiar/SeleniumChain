@@ -1,4 +1,4 @@
-﻿namespace SeleniumChains.CustomExceptions
+﻿namespace SeleniumChain.CustomExceptions
 {
 	public class SeleniumChainNotFoundException:Exception
     {
@@ -6,7 +6,7 @@
 		{
 		}
 
-		public SeleniumChainNotFoundException(string message= $"{nameof(SeleniumChain)} must be set from SetSeleniumChain")
+		public SeleniumChainNotFoundException(string message= $"{nameof(ChainSelenium)} must be set from SetSeleniumChain")
 			: base(message)
 		{
 		}

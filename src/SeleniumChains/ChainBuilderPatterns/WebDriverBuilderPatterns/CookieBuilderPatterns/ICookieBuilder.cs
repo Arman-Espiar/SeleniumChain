@@ -1,4 +1,4 @@
-﻿namespace SeleniumChains.ChainBuilderPatterns.WebDriverBuilderPatterns.CookieBuilderPatterns;
+﻿namespace SeleniumChain.ChainBuilderPatterns.WebDriverBuilderPatterns.CookieBuilderPatterns;
 public interface ICookieBuilder
 {
 	//todo kamel shavad.

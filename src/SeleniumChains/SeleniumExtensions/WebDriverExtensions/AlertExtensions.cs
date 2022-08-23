@@ -1,6 +1,6 @@
 ﻿using OpenQA.Selenium;
 
-namespace SeleniumChains.SeleniumExtensions.WebDriverExtensions;
+namespace SeleniumChain.SeleniumExtensions.WebDriverExtensions;
 public static class AlertExtensions
 {
 	public static string? AlertGetText(this IWebDriver driver)

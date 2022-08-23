@@ -1,54 +1,53 @@
-﻿using SeleniumChains.ChainBuilderPatterns.WebElementBuilderPatterns.FindingWebElementsBuilderPatterns;
-using SeleniumChains.ChainBuilderPatterns.WebElementBuilderPatterns.InteractingWithWebElementsBuilderPatterns;
-using SeleniumChains.SeleniumChainClasses.Base;
+﻿using SeleniumChain.ChainBuilderPatterns.WebElementBuilderPatterns.FindingWebElementsBuilderPatterns;
+using SeleniumChain.SeleniumChainClasses.Base;
 
-namespace SeleniumChains.SeleniumChainClasses;
+namespace SeleniumChain.SeleniumChainClasses;
 public class FindElementBy : SeleniumChainBase, IFindElementBy
 {
-	private readonly SeleniumChain _seleniumChain;
+	private readonly ChainSelenium _chainSelenium;
 
-	public FindElementBy(SeleniumChain seleniumChain)
+	public FindElementBy(ChainSelenium chainSelenium)
 	{
-		_seleniumChain = seleniumChain;
+		_chainSelenium = chainSelenium;
 	}
-	public SeleniumChain Id(string id)
+	public ChainSelenium Id(string id)
 	{
 		new ElementFindersBuilder().FindElementIfExistsById(id);
-		return _seleniumChain;
+		return _chainSelenium;
 	}
-	public SeleniumChain ClassName(string className)
+	public ChainSelenium ClassName(string className)
 	{
 		new ElementFindersBuilder().FindElementIfExistsByClassName(className);
-		return _seleniumChain;
+		return _chainSelenium;
 	}
-	public SeleniumChain CssSelector(string cssSelector)
+	public ChainSelenium CssSelector(string cssSelector)
 	{
 		new ElementFindersBuilder().FindElementIfExistsByCssSelector(cssSelector);
-		return _seleniumChain;
+		return _chainSelenium;
 	}
-	public SeleniumChain LinkText(string linkText)
+	public ChainSelenium LinkText(string linkText)
 	{
 		new ElementFindersBuilder().FindElementIfExistsByLinkText(linkText); 
-		return _seleniumChain;
+		return _chainSelenium;
 	}
-	public SeleniumChain Name(string name)
+	public ChainSelenium Name(string name)
 	{
 		new ElementFindersBuilder().FindElementIfExistsByName(name);
-		return _seleniumChain;
+		return _chainSelenium;
 	}
-	public SeleniumChain PartialLinkText(string partialLinkText)
+	public ChainSelenium PartialLinkText(string partialLinkText)
 	{
 		new ElementFindersBuilder().FindElementIfExistsByPartialLinkText(partialLinkText);
-		return _seleniumChain;
+		return _chainSelenium;
 	}
-	public SeleniumChain TagName(string tagName)
+	public ChainSelenium TagName(string tagName)
 	{
 		new ElementFindersBuilder().FindElementIfExistsByTagName(tagName);
-		return _seleniumChain;
+		return _chainSelenium;
 	}
-	public SeleniumChain XPath(string xPath)
+	public ChainSelenium XPath(string xPath)
 	{
 		new ElementFindersBuilder().FindElementIfExistsByXPath(xPath);
-		return _seleniumChain;
+		return _chainSelenium;
 	}
 }

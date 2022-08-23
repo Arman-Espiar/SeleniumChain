@@ -1,6 +1,6 @@
 ﻿using OpenQA.Selenium;
 
-namespace SeleniumChains.SeleniumExtensions.WebDriverExtensions;
+namespace SeleniumChain.SeleniumExtensions.WebDriverExtensions;
 public static class UrlNavigationExtensions
 {
 	public static IWebDriver? GotoUrl(this IWebDriver? webDriver, string url)

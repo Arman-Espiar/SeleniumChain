@@ -1,6 +1,6 @@
 ﻿using OpenQA.Selenium;
 
-namespace SeleniumChains.SeleniumExtensions.WebDriverExtensions;
+namespace SeleniumChain.SeleniumExtensions.WebDriverExtensions;
 public static class WebDriverUtilities
 {
 	public static IWebElement? FindElementIfExists(this IWebDriver driver, By by)

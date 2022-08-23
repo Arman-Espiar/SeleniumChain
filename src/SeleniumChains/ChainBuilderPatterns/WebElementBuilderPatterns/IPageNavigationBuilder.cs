@@ -1,8 +1,7 @@
-﻿using OpenQA.Selenium;
-using SeleniumChains.SeleniumChainClasses.Base;
-using SeleniumChains.SeleniumExtensions.WebElementExtensions;
+﻿using SeleniumChain.SeleniumChainClasses.Base;
+using SeleniumChain.SeleniumExtensions.WebElementExtensions;
 
-namespace SeleniumChains.ChainBuilderPatterns.WebElementBuilderPatterns;
+namespace SeleniumChain.ChainBuilderPatterns.WebElementBuilderPatterns;
 public interface IPageNavigationBuilder
 {
 	IPageNavigationBuilder ScrollDown();

@@ -1,6 +1,6 @@
 ﻿using OpenQA.Selenium;
 
-namespace SeleniumChains.SeleniumExtensions.WebElementExtensions;
+namespace SeleniumChain.SeleniumExtensions.WebElementExtensions;
 public static class PageNavigation
 {
 	public static IWebElement? ScrollDownElement(this IWebElement? webElement)

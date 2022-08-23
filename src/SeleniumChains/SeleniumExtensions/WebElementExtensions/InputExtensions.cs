@@ -1,6 +1,6 @@
 ﻿using OpenQA.Selenium;
 
-namespace SeleniumChains.SeleniumExtensions.WebElementExtensions;
+namespace SeleniumChain.SeleniumExtensions.WebElementExtensions;
 public static class InputExtensions
 {
     public static IWebElement ClearTextInputElement(this IWebElement webElement)

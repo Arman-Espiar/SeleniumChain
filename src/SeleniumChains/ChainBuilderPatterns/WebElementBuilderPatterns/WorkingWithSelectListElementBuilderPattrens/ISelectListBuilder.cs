@@ -1,4 +1,4 @@
-﻿namespace SeleniumChains.ChainBuilderPatterns.WebElementBuilderPatterns.WorkingWithSelectListElementBuilderPattrens;
+﻿namespace SeleniumChain.ChainBuilderPatterns.WebElementBuilderPatterns.WorkingWithSelectListElementBuilderPattrens;
 public interface ISelectListBuilder
 {
 	//todo kamel shavad

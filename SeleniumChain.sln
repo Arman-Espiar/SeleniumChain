@@ -7,9 +7,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A40566A8-EFB
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sample", "sample", "{3B0B4D31-888D-4B04-B88D-63D08DB36C84}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeleniumChains.Sample", "sample\SeleniumChains.Sample\SeleniumChains.Sample.csproj", "{AECC2456-C8BA-4E1E-ABCD-274A2028B1AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeleniumChain.Sample", "sample\SeleniumChains.Sample\SeleniumChain.Sample.csproj", "{AECC2456-C8BA-4E1E-ABCD-274A2028B1AA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeleniumChains", "src\SeleniumChains\SeleniumChains.csproj", "{ED0BF228-E6FE-4BFF-AC4C-4AADC5D3CAF9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeleniumChain", "src\SeleniumChains\SeleniumChain.csproj", "{ED0BF228-E6FE-4BFF-AC4C-4AADC5D3CAF9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
