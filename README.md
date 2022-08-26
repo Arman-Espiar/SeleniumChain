@@ -52,6 +52,12 @@ new ChainSelenium().SetDriver(driver)
 ## wiki
 [wiki](https://github.com/Arman-Espiar/SeleniumChain/wiki)
 
+   ## Install
+   ```bash
+Install-Package SeleniumChain -Version 0.0.1-alpha
+```
+   [nuget](https://www.nuget.org/packages/SeleniumChain/0.0.1-alpha)
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
