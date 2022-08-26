@@ -1,6 +1,6 @@
 # SeleniumChain
 
-SeleniumChain is a library for fluent use and Avoiding repetitive code. This library has many helpful extension methods.
+SeleniumChain is a library for fluent use and Avoiding repetitive code. in this library used [SeleniumExtensionMethods](https://github.com/Arman-Espiar/SeleniumExtensionMethods) library
 
 ## Usage
 
@@ -14,7 +14,7 @@ IWebDriver driver = new FirefoxDriver();
 string webUrl = "https://www.wikipedia.org/";
 
 
-new SeleniumChain(driver)
+new ChainSelenium().SetDriver(driver)
 	.ImplicitWaitingForEachPageToLoad(TimeSpan.FromSeconds(3))
 	.Goto(webUrl)
 	.PageNavigation(config => config.ScrollDown())
@@ -41,6 +41,11 @@ new SeleniumChain(driver)
 		.ClearTextInputElementById()
 		.WriteInElementById("Order of Assassins" + Keys.Enter)
 	)
+	.ClickOnElement(config => config
+		.ClickOnElementByXPath("/html/body/div[3]/div[3]/div[5]/div[1]/div[4]/ul/li[5]/a"))
+	.ClickOnElementById("p-logo")
+	.ClickOnElementById("ca-viewsource")
+	.ScrollDownElementIfExistsById("wpTextbox1")
 	;
 ```
 
