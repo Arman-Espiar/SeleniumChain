@@ -17,7 +17,7 @@ string webUrl = "https://www.wikipedia.org/";
 new ChainSelenium().SetDriver(driver)
 	.ImplicitWaitingForEachPageToLoad(TimeSpan.FromSeconds(3))
 	.Goto(webUrl)
-	.PageNavigation(config => config.ScrollDown())
+	.PageScrollDown()
 	.ClickOnElement(config => config
 		.ClickOnElementById("searchLanguage")
 		.ClickOnElementByCssSelector("#searchLanguage > option:nth-child(21)")
@@ -32,7 +32,7 @@ new ChainSelenium().SetDriver(driver)
 		.ClickOnElementById("p-lang-btn")
 		.ClickOnElementByXPath("/html/body/div[1]/div[2]/div[1]/div/ul[2]/li[3]/a")
 	)
-	.PageNavigation(config => config.ScrollDown())
+	.PageScrollDown()
 	.ClickOnElement(config => config
 		.ClickOnElementByCssSelector("#mw-normal-catlinks > ul:nth-child(2) > li:nth-child(1) > a:nth-child(1)")
 	)
@@ -51,3 +51,8 @@ new ChainSelenium().SetDriver(driver)
 
 ## wiki
 [wiki](https://github.com/Arman-Espiar/SeleniumChain/wiki)
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
