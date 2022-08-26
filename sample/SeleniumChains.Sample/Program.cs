@@ -1,15 +1,16 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
+using SeleniumChain;
 
 IWebDriver driver = new FirefoxDriver();
 
 string webUrl = "https://www.wikipedia.org/";
 
 
-new SeleniumChain.ChainSelenium().SetDriver(driver)
+new ChainSelenium().SetDriver(driver)
 	.ImplicitWaitingForEachPageToLoad(TimeSpan.FromSeconds(3))
 	.Goto(webUrl)
-	.PageNavigation(config => config.ScrollDown())
+	.PageScrollDown()
 	.ClickOnElement(config => config
 		.ClickOnElementById("searchLanguage")
 		.ClickOnElementByCssSelector("#searchLanguage > option:nth-child(21)")
@@ -24,7 +25,7 @@ new SeleniumChain.ChainSelenium().SetDriver(driver)
 		.ClickOnElementById("p-lang-btn")
 		.ClickOnElementByXPath("/html/body/div[1]/div[2]/div[1]/div/ul[2]/li[3]/a")
 	)
-	.PageNavigation(config => config.ScrollDown())
+	.PageScrollDown()
 	.ClickOnElement(config => config
 		.ClickOnElementByCssSelector("#mw-normal-catlinks > ul:nth-child(2) > li:nth-child(1) > a:nth-child(1)")
 	)
