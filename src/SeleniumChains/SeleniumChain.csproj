@@ -4,12 +4,15 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <PackageProjectUrl>https://github.com/Arman-Espiar/SeleniumChains</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/Arman-Espiar/SeleniumChains</RepositoryUrl>
-    <PackageTags>Selenium,Extension,Fluent</PackageTags>
+    <PackageProjectUrl>https://github.com/Arman-Espiar/SeleniumChain</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Arman-Espiar/SeleniumChain</RepositoryUrl>
+    <PackageTags>Selenium;Extension;Fluent</PackageTags>
     <Authors>Arman Espiar</Authors>
-    <Description>SeleniumChain Library Has many extension methods for selenium and has fluent commands.</Description>
-    <Title>Selenium Chains</Title>
+    <Description>SeleniumChain Library for fluent commands.</Description>
+    <Title>Selenium Chain</Title>
+    <Version>0.0.1-alpha</Version>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <AssemblyVersion></AssemblyVersion>
   </PropertyGroup>
 
   <ItemGroup>
