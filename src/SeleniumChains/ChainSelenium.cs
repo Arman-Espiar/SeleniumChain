@@ -2,6 +2,7 @@
 using SeleniumChain.ChainBuilderPatterns.WebDriverBuilderPatterns.BrowserBuilderPatterns;
 using SeleniumChain.ChainBuilderPatterns.WebElementBuilderPatterns;
 using SeleniumChain.ChainBuilderPatterns.WebElementBuilderPatterns.FindingWebElementsBuilderPatterns;
+using SeleniumChain.ChainBuilderPatterns.WebElementBuilderPatterns.FindingWebElementsWithResultBuilderPatterns;
 using SeleniumChain.ChainBuilderPatterns.WebElementBuilderPatterns.InteractingWithWebElementsBuilderPatterns;
 using SeleniumChain.SeleniumChainClasses.Base;
 using SeleniumExtensionMethods.SeleniumExtensions.WebDriverExtensions;
@@ -97,6 +98,18 @@ public class ChainSelenium : SeleniumChainBase
 		configure(webElementsBuilder);
 		return this;
 	}
+	public ChainSelenium FindElementWithResult(Action<IElementsFindersWithResultBuilder> configure)
+	{
+		var webElementWithResultBuilder = new ElementsFindersWithResultBuilder();
+		configure(webElementWithResultBuilder);
+		return this;
+	}
+	public ChainSelenium FindElementsWithResult(Action<IElementsFindersWithResultBuilder> configure)
+	{
+		var webElementsWithResultBuilder = new ElementsFindersWithResultBuilder();
+		configure(webElementsWithResultBuilder);
+		return this;
+	}
 	#region FindElementsBy
 	public ChainSelenium FindElementsIfExistsById(string id)
 	{
@@ -132,6 +145,41 @@ public class ChainSelenium : SeleniumChainBase
 	}
 	#endregion End FindElementsBy
 
+	#region FindElementsWithResultBy
+	public ChainSelenium FindElementsIfExistsWithResultById(string id, out IList<IWebElement>? webElements)
+	{
+		return ChainBase.FindElementsWithResultBy.Id(id,out webElements);
+	}
+	public ChainSelenium FindElementsIfExistsWithResultByClassName(string className, out IList<IWebElement>? webElements)
+	{
+		return ChainBase.FindElementsWithResultBy.ClassName(className, out webElements);
+	}
+	public ChainSelenium FindElementsIfExistsWithResultByCssSelector(string cssSelector, out IList<IWebElement>? webElements)
+	{
+		return ChainBase.FindElementsWithResultBy.CssSelector(cssSelector, out webElements);
+	}
+	public ChainSelenium FindElementsIfExistsWithResultByLinkText(string linkText, out IList<IWebElement>? webElements)
+	{
+		return ChainBase.FindElementsWithResultBy.LinkText(linkText, out webElements);
+	}
+	public ChainSelenium FindElementsIfExistsWithResultByName(string name, out IList<IWebElement>? webElements)
+	{
+		return ChainBase.FindElementsWithResultBy.Name(name, out webElements);
+	}
+	public ChainSelenium FindElementsIfExistsWithResultByPartialLinkText(string partialLinkText, out IList<IWebElement>? webElements)
+	{
+		return ChainBase.FindElementsWithResultBy.PartialLinkText(partialLinkText, out webElements);
+	}
+	public ChainSelenium FindElementsIfExistsWithResultByTagName(string tagName, out IList<IWebElement>? webElements)
+	{
+		return ChainBase.FindElementsWithResultBy.TagName(tagName, out webElements);
+	}
+	public ChainSelenium FindElementsIfExistsWithResultByXPath(string xPath, out IList<IWebElement>? webElements)
+	{
+		return ChainBase.FindElementsWithResultBy.XPath(xPath, out webElements);
+	}
+	#endregion End FindElementsWithResultBy
+
 	#region FindElementBy
 	public ChainSelenium FindElementIfExistsById(string id)
 	{
@@ -166,6 +214,41 @@ public class ChainSelenium : SeleniumChainBase
 		return ChainBase.FindElementBy.XPath(xPath);
 	}
 	#endregion End FindElementBy
+
+	#region FindElementWithResultBy
+	public ChainSelenium FindElementIfExistsWithResultById(string id, out IWebElement? webElement)
+	{
+		return ChainBase.FindElementWithResultBy.Id(id,out webElement);
+	}
+	public ChainSelenium FindElementIfExistsWithResultByClassName(string className, out IWebElement? webElement)
+	{
+		return ChainBase.FindElementWithResultBy.ClassName(className, out webElement);
+	}
+	public ChainSelenium FindElementIfExistsWithResultByCssSelector(string cssSelector, out IWebElement? webElement)
+	{
+		return ChainBase.FindElementWithResultBy.CssSelector(cssSelector, out webElement);
+	}
+	public ChainSelenium FindElementIfExistsWithResultByLinkText(string linkText, out IWebElement? webElement)
+	{
+		return ChainBase.FindElementWithResultBy.LinkText(linkText, out webElement);
+	}
+	public ChainSelenium FindElementIfExistsWithResultByName(string name, out IWebElement? webElement)
+	{
+		return ChainBase.FindElementWithResultBy.Name(name, out webElement);
+	}
+	public ChainSelenium FindElementIfExistsWithResultByPartialLinkText(string partialLinkText, out IWebElement? webElement)
+	{
+		return ChainBase.FindElementWithResultBy.PartialLinkText(partialLinkText, out webElement);
+	}
+	public ChainSelenium FindElementIfExistsWithResultByTagName(string tagName, out IWebElement? webElement)
+	{
+		return ChainBase.FindElementWithResultBy.TagName(tagName, out webElement);
+	}
+	public ChainSelenium FindElementIfExistsWithResultByXPath(string xPath, out IWebElement? webElement)
+	{
+		return ChainBase.FindElementWithResultBy.XPath(xPath, out webElement);
+	}
+	#endregion End FindElementWithResultBy
 
 	#region ClickOnElementBy
 	public ChainSelenium ClickOnElementById(string id)

@@ -10,14 +10,14 @@
     <Authors>Arman Espiar</Authors>
     <Description>SeleniumChain Library for fluent commands.</Description>
     <Title>Selenium Chain</Title>
-    <Version>0.0.1-alpha</Version>
+    <Version>0.0.2-alpha</Version>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <AssemblyVersion></AssemblyVersion>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Selenium.Support" Version="4.4.0" />
-    <PackageReference Include="Selenium.WebDriver" Version="4.4.0" />
+    <PackageReference Include="Selenium.Support" Version="4.5.1" />
+    <PackageReference Include="Selenium.WebDriver" Version="4.5.1" />
     <PackageReference Include="SeleniumExtensionMethods" Version="1.0.0" />
   </ItemGroup>
 

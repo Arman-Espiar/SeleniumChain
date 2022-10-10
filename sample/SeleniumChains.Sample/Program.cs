@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
+
 using SeleniumChain;
 
 IWebDriver driver = new FirefoxDriver();
@@ -7,7 +8,7 @@ IWebDriver driver = new FirefoxDriver();
 string webUrl = "https://www.wikipedia.org/";
 
 
-new ChainSelenium().SetDriver(driver)
+var chineSelenium = new ChainSelenium().SetDriver(driver)
 	.ImplicitWaitingForEachPageToLoad(TimeSpan.FromSeconds(3))
 	.Goto(webUrl)
 	.PageScrollDown()
@@ -39,4 +40,10 @@ new ChainSelenium().SetDriver(driver)
 	.ClickOnElementById("p-logo")
 	.ClickOnElementById("ca-viewsource")
 	.ScrollDownElementIfExistsById("wpTextbox1")
+	.FindElementIfExistsWithResultById("dummyid", out var result)
 	;
+
+if (result is null)
+{
+	chineSelenium.CloseBrowser();
+}
