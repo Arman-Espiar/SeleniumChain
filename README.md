@@ -7,6 +7,7 @@ SeleniumChain is a library for fluent use and Avoiding repetitive code. in this 
 ```csharp
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
+
 using SeleniumChain;
 
 IWebDriver driver = new FirefoxDriver();
@@ -14,7 +15,7 @@ IWebDriver driver = new FirefoxDriver();
 string webUrl = "https://www.wikipedia.org/";
 
 
-new ChainSelenium().SetDriver(driver)
+var chineSelenium = new ChainSelenium().SetDriver(driver)
 	.ImplicitWaitingForEachPageToLoad(TimeSpan.FromSeconds(3))
 	.Goto(webUrl)
 	.PageScrollDown()
@@ -46,7 +47,13 @@ new ChainSelenium().SetDriver(driver)
 	.ClickOnElementById("p-logo")
 	.ClickOnElementById("ca-viewsource")
 	.ScrollDownElementIfExistsById("wpTextbox1")
+	.FindElementIfExistsWithResultById("dummyid", out var result)
 	;
+
+if (result is null)
+{
+	chineSelenium.CloseBrowser();
+}
 ```
 
 ## wiki
@@ -54,9 +61,9 @@ new ChainSelenium().SetDriver(driver)
 
    ## Install
    ```bash
-Install-Package SeleniumChain -Version 0.0.2-alpha
+Install-Package SeleniumChain -Version 0.0.3-alpha
 ```
-   [nuget](https://www.nuget.org/packages/SeleniumChain/0.0.2-alpha)
+   [nuget](https://www.nuget.org/packages/SeleniumChain/0.0.3-alpha)
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
