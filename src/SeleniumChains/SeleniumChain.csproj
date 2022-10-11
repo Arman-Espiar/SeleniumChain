@@ -10,7 +10,7 @@
     <Authors>Arman Espiar</Authors>
     <Description>SeleniumChain Library for fluent commands.</Description>
     <Title>Selenium Chain</Title>
-    <Version>0.0.2-alpha</Version>
+    <Version>0.0.3-alpha</Version>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <AssemblyVersion></AssemblyVersion>
   </PropertyGroup>
