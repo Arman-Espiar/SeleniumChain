@@ -61,9 +61,9 @@ if (result is null)
 
    ## Install
    ```bash
-Install-Package SeleniumChain -Version 0.0.3-alpha
+Install-Package SeleniumChain -Version 1.0.0.1-alpha
 ```
-   [nuget](https://www.nuget.org/packages/SeleniumChain/0.0.3-alpha)
+   [nuget](https://www.nuget.org/packages/SeleniumChain/1.0.0.1-alpha)
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
