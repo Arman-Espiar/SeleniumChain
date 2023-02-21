@@ -15,7 +15,7 @@ IWebDriver driver = new FirefoxDriver();
 string webUrl = "https://www.wikipedia.org/";
 
 
-var chineSelenium = new ChainSelenium().SetDriver(driver)
+ChainSelenium ChainSelenium = new ChainSelenium().SetDriver(driver)
 	.ImplicitWaitingForEachPageToLoad(TimeSpan.FromSeconds(3))
 	.Goto(webUrl)
 	.PageScrollDown()
@@ -52,7 +52,7 @@ var chineSelenium = new ChainSelenium().SetDriver(driver)
 
 if (result is null)
 {
-	chineSelenium.CloseBrowser();
+	ChainSelenium.CloseBrowser();
 }
 ```
 
